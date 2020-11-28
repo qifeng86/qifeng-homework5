@@ -1,3 +1,4 @@
+// Define an array of variables with empty value //
 let workSchedule = {
     "8 AM": "",
     "9 AM": "",
@@ -18,9 +19,10 @@ $(document).ready(function () {
         updateCalendarTasks(JSON.parse(localStorage.getItem('workSchedule')));
     }
 })
-
+// Get today's date //
 $('#currentDay').text(moment().format('dddd') + ", " + moment().format('MMMM Do YYYY'));
 
+// loop through each time, if time is in the past, then use 'past' styling, if time is in the future, then use 'future' styling, otherwise use 'present' styling // 
 let counter = 1;
 for (const property in workSchedule) {
     let textEntry = "#text-entry" + counter;
@@ -39,6 +41,7 @@ for (const property in workSchedule) {
     counter++;
 }
 
+// save text from input field //
 $("button").click(function () {
     value = $(this).siblings("textarea").val();
     hourString = $(this).siblings("div").text();
@@ -60,6 +63,7 @@ function hourNumberFromHourString(hourString) {
         case "5 PM": return 17;
     }
 }
+
 
 function loadCorrectDataset() {
     result = localStorage.getItem('workSchedule')
