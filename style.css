@@ -1,0 +1,27 @@
+.jumbotron {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  text-align: center;
+  background-color: white;
+  color: black;
+  border-radius: 0;
+  border-bottom: 5px solid black;
+}
+
+input{
+  background: transparent;
+  resize: none;
+  color: black;
+  padding: 10px;
+}
+
+.row {
+  height: 80px;
+  border-top: 1px solid white;;
+  background-color: white;
+}
+
+button {
+  background-color: #06AED5;
+  color: white;
+}
